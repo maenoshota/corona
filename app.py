@@ -3,12 +3,20 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 plt.rcParams['font.family'] = 'Meiryo'
+from matplotlib import font_manager
 from datetime import datetime
+
+font_path = "./fonts/NotoSansJP-Regular.otf"
+font_manager.fontManager.addfont(font_path)
+plt.rcParams['font.family'] = 'Noto Sans JP'
+plt.rcParams['axes.unicode_minus'] = False
 
 # Streamlitのページ設定
 st.set_page_config(page_title="東京ワクチン接種ダッシュボード", layout="wide")
 
 st.title("東京ワクチン接種ダッシュボード")
+
+
 
 # データの読み込みと前処理
 @st.cache_data
