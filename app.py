@@ -6,7 +6,7 @@ plt.rcParams['font.family'] = 'Meiryo'
 from matplotlib import font_manager
 from datetime import datetime
 
-font_path = "./fonts/NotoSansJP-Regular.otf"
+font_path = "NotoSansJP-Regular.ttf"
 font_manager.fontManager.addfont(font_path)
 plt.rcParams['font.family'] = 'Noto Sans JP'
 plt.rcParams['axes.unicode_minus'] = False
