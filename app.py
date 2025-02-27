@@ -21,7 +21,6 @@ df = pd.read_csv("02_tokyo_daily_vaccines.csv", encoding='utf-8-sig')
 df['date'] = pd.to_datetime(df['date'])
 df = df.sort_values('date')
 df['Cumulative_Vaccinations'] = df['Vaccinations'].cumsum()
-df['7_day_MA'] = df['Vaccinations'].rolling(window=7).mean()
 
 
 date_min = df['date'].min()
